@@ -1,13 +1,13 @@
 import express from "express";
-import role from "../controllers/role.js";
+import pizza from "../controllers/pizza.js";
 import auth from "../middlewares/auth.js";
 import admin from "../middlewares/admin.js";
 const router = express.Router();
 
-router.post("/registerRole", auth, admin, role.registerRole);
-router.get("/listRole", auth, admin, role.listRole);
-router.get("/findRole/:_id", auth, admin, role.findRole);
-router.put("/updateRole", auth, admin, role.updateRole);
-router.delete("/deleteRole/:_id", auth, admin, role.deleteRole);
+router.post("/registerPizza", auth, pizza.registerPizza);
+router.get("/listPizza", auth, pizza.listPizza);
+router.get("/findPizza/:_id", auth, pizza.findPizza);
+router.put("/updatePizza", auth, pizza.updatePizza);
+router.delete("/deletePizza/:_id", auth, pizza.deletePizza);
 
 export default router;
