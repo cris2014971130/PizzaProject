@@ -1,0 +1,776 @@
+{
+	"info": {
+		"_postman_id": "91ed9a02-5b1a-4f65-9b26-2079b44aaa72",
+		"name": "PizzaProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TEST-ROLE",
+			"item": [
+				{
+					"name": "Eliminar Role",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/role/deleteRole/619fbccf2538155ab3a07013",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"role",
+								"deleteRole",
+								"619fbccf2538155ab3a07013"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Role Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"description\": \"Permissions: register, list, delete and update tasks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/role/registerRole",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"role",
+								"registerRole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Role User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"user\",\r\n    \"description\": \"Permissions: list\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/role/registerRole",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"role",
+								"registerRole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Roles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin\",\r\n    \"description\": \"Permissions: register, list, delete and update tasks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/role/listRole",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"role",
+								"listRole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"619fbccf2538155ab3a07013\",\r\n    \"name\": \"admin\",\r\n    \"description\": \"admin Role 213123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/role/updateRole",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"role",
+								"updateRole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Role por ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/role/findRole/619fe4cb07fb3c79d0f62eef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"role",
+								"findRole",
+								"619fe4cb07fb3c79d0f62eef"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TEST-USER",
+			"item": [
+				{
+					"name": "Registrar Administrador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Juan Castillo\",\r\n    \"email\": \"jcastilldadadao@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"roleId\": \"619fe4cb07fb3c79d0f62eef\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/registerAdminUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"registerAdminUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/user/listUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"listUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"619fe50f07fb3c79d0f62ef4\",\r\n    \"name\": \"Jose Castro\",\r\n    \"email\": \"jcastillogmail.com\",\r\n    \"password\": \"\",\r\n    \"roleId\": \"619fe4cb07fb3c79d0f62eef\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/user/deleteUser/619fe6aa07fb3c79d0f62f09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"deleteUser",
+								"619fe6aa07fb3c79d0f62f09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuario por ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/user/findUser/619fe50f07fb3c79d0f62ef4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"findUser",
+								"619fe50f07fb3c79d0f62ef4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TEST-ORDER",
+			"item": [
+				{
+					"name": "Listar Orden",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/order/listOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"listOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Orden",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"619fefcb7d268ab6fea78190\",\r\n    \"status\": \"In progress\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/order/updateStatusOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"updateStatusOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Orden",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pizzaId\":\"619fe96507fb3c79d0f62f15\",\r\n    \"amount\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/order/saveOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"saveOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Orden",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/order/deleteOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"deleteOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Orden por ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/order/findOrder/619fefcb7d268ab6fea78190",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"order",
+								"findOrder",
+								"619fefcb7d268ab6fea78190"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TEST-PIZZA",
+			"item": [
+				{
+					"name": "Registrar Pizza",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pizza Hawaiana\",\r\n    \"description\": \"Pizza con piña, jamon y nada mas xD\",\r\n    \"price\": 2500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/pizza/registerPizza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"pizza",
+								"registerPizza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pizza",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/pizza/listPizza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"pizza",
+								"listPizza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/pizza/updatePizza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"pizza",
+								"updatePizza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar pizza 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pizza Peperroni\",\r\n    \"description\": \"Pizza con Peperroni y nada mas\",\r\n    \"price\": 2500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/pizza/registerPizza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"pizza",
+								"registerPizza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Pizza por ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlmZTUzMTA3ZmIzYzc5ZDBmNjJlZjgiLCJuYW1lIjoiSnVhbiBDYXN0aWxsbyIsInJvbGVJZCI6IjYxOWZlNGNiMDdmYjNjNzlkMGY2MmVlZiIsImlhdCI6MTYzNzg2ODg2Mn0.w0nyqeQ-d-q_0JSa-C93LIpZShZ4TYTdWYaihRu7_rQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/pizza/findPizza/619fe92607fb3c79d0f62f12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"pizza",
+								"findPizza",
+								"619fe92607fb3c79d0f62f12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Pizza",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"619fcaac231a875ec82f13ca\",\r\n    \"name\": \"Pizza Peperroni Mejorada\",\r\n    \"description\": \"Pizza con Peperroni y algo mas\",\r\n    \"price\": 3500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/pizza/updatePizza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"pizza",
+								"updatePizza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/pizza/deletePizza/619fe92607fb3c79d0f62f12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"pizza",
+								"deletePizza",
+								"619fe92607fb3c79d0f62f12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TEST-AUTH",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jcastillo@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

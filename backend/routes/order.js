@@ -5,7 +5,9 @@ import admin from "../middlewares/admin.js";
 const router = express.Router();
 
 router.get("/listOrder", auth, order.listOrder);
+router.get("/findOrder/:_id", auth, order.findOrder);
 router.post("/saveOrder", auth, order.saveOrder);
-router.put("/updateStatusOrder", auth, admin, order.updateStatusOrder);
+router.delete("/deleteOrder/:_id", auth, order.deleteOrder);
+router.put("/updateStatusOrder", auth, order.updateStatusOrder);
 
 export default router;
