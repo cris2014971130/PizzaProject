@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const orderSchema = new mongoose.Schema({
-  userId: {type: mongoose.Schema.ObjectId, ref: "user"},
-  pizzaId: {type: mongoose.Schema.ObjectId, ref: "pizza"},
+  userId: {type: mongoose.Schema.ObjectId, ref: "users"},
+  pizzaId: {type: mongoose.Schema.ObjectId, ref: "pizzas"},
   registerDate: { type: Date, default: Date.now },
   dbStatus: Boolean,
 });
