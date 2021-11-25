@@ -5,8 +5,8 @@ import admin from "../middlewares/admin.js";
 
 const router = express.Router();
 
-router.post("/registerUser", user.registerUser);
-router.post("/registerAdminUser", user.registerAdminUser);
+router.post("/registerUser", auth, admin, user.registerUser);
+router.post("/registerAdminUser", auth, admin, user.registerAdminUser);
 router.post("/login", user.login);
 router.get("/listUsers", auth, admin, user.listUsers);
 router.get("/findUser/:_id", auth, admin, user.findUser);
