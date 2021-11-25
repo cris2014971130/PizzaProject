@@ -15,24 +15,23 @@ import { UpdateUserComponent } from './admin/update-user/update-user.component';
 import { LoginComponent } from './home/login/login.component';
 
 const routes: Routes = [
-  {path:'',component:LoginComponent},
-  {path:'list-order',component:ListOrderComponent},
-  {path:'list-pizza',component:ListPizzaComponent},
-  {path:'list-role',component:ListRoleComponent},
-  {path:'list-user',component:ListUserComponent},
-  {path:'register-order',component:RegisterOrderComponent},
-  {path:'register-pizza',component:RegisterPizzaComponent},
-  {path:'register-role',component:RegisterRoleComponent},
-  {path:'register-user',component:RegisterUserComponent},
-  {path:'update-order',component:UpdateOrderComponent},
-  {path:'update-pizza',component:UpdatePizzaComponent},
-  {path:'update-role',component:UpdateRoleComponent},
-  {path:'update-user',component:UpdateUserComponent}
-
+  { path: '', component: LoginComponent },
+  { path: 'list-order', component: ListOrderComponent },
+  { path: 'list-pizza', component: ListPizzaComponent },
+  { path: 'list-role', component: ListRoleComponent },
+  { path: 'list-user', component: ListUserComponent },
+  { path: 'register-order', component: RegisterOrderComponent },
+  { path: 'register-pizza', component: RegisterPizzaComponent },
+  { path: 'register-role', component: RegisterRoleComponent },
+  { path: 'register-user', component: RegisterUserComponent },
+  { path: 'update-order', component: UpdateOrderComponent },
+  { path: 'update-pizza', component: UpdatePizzaComponent },
+  { path: 'update-role', component: UpdateRoleComponent },
+  { path: 'update-user', component: UpdateUserComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
