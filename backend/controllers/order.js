@@ -37,4 +37,18 @@ const updateStatusOrder = async (req, res) => {
     : res.status(200).send({ message: "Status updated" });
 };
 
-export default { saveOrder, listOrder, updateStatusOrder};
+const deleteOrder = async (req, res) => {
+  const taskDelete = await order.findByIdAndDelete(req.params._id);
+  return !taskDelete
+    ? res.status(400).send({ message: "Order not found" })
+    : res.status(200).send({ message: "Order deleted" });
+};
+
+const findOrder = async (req, res) => {
+  const orderFind = await order.findById({ _id: req.params["_id"] });
+  return !orderFind
+    ? res.status(400).send({ message: "No search results" })
+    : res.status(200).send({orderFind });
+};
+
+export default { saveOrder, listOrder, updateStatusOrder, deleteOrder, findOrder};
